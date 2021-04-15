@@ -1,13 +1,16 @@
 extends Node
 
 # Score
-var hiscore = 100
+var hiscore = 7000
+
+# Camera
+var camera = null
 
 # Player
 var player = null # Player Instante
 var pre_player = preload("res://scenes/Player.tscn")
 
-var default_lifes = 1
+var default_lifes = 7
 var lifes = 0
 
 var levels = [

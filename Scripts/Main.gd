@@ -2,6 +2,7 @@ extends Node2D
 
 func _ready():
 	$Audio.play()
+	Globals.camera = $Camera
 	start()
 
 # starts all configs	
@@ -40,9 +41,9 @@ func _process(delta):
 			Globals.points+=5
 			Globals.timer=0
 
-		$Camera.position.x += 5
-		$Interface.position.x = ($Camera.position.x - 520)
-		$PlayerPos.position.x = ($Camera.position.x - 100)
+		Globals.camera.position.x += 5
+		$Interface.position.x = (Globals.camera.position.x - 520)
+		$PlayerPos.position.x = (Globals.camera.position.x - 100)
 		$Interface.setPoints( Globals.points )
 	else:
 		#Globals.points=0 	# reset pts

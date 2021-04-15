@@ -11,6 +11,9 @@ script = ExtResource( 2 )
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 512, 384 )
 current = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Background" type="ParallaxBackground" parent="."]
 
@@ -26,9 +29,11 @@ texture = ExtResource( 1 )
 z_index = 4096
 
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
+visible = false
 stream = ExtResource( 5 )
 volume_db = 5.0
 max_distance = 1e+12
 
 [node name="PlayerPos" type="Position2D" parent="."]
+visible = false
 position = Vector2( 430, 305 )

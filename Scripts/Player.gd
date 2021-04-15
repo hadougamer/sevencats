@@ -42,4 +42,7 @@ func die():
 
 func _on_visible_screen_exited():
 	print('Player exited the screen')
-	self.die()
+	if self.position.x < Globals.camera.position.x: 
+		self.die()
+	else:
+		self.position.x = (Globals.camera.position.x + 540)
