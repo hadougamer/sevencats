@@ -1,0 +1,169 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprite/asset/MarioLevelStuffs.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[node name="Tiles" type="Node2D"]
+rotation = 3.14159
+
+[node name="0" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+region_filter_clip = true
+
+[node name="Body" type="StaticBody2D" parent="0"]
+
+[node name="Shape" type="CollisionShape2D" parent="0/Body"]
+shape = SubResource( 1 )
+
+[node name="1" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+region_filter_clip = true
+
+[node name="Body" type="StaticBody2D" parent="1"]
+
+[node name="Shape" type="CollisionShape2D" parent="1/Body"]
+shape = SubResource( 1 )
+
+[node name="2" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
+region_filter_clip = true
+
+[node name="Body" type="StaticBody2D" parent="2"]
+
+[node name="Shape" type="CollisionShape2D" parent="2/Body"]
+shape = SubResource( 1 )
+
+[node name="3" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 32, 32 )
+region_filter_clip = true
+
+[node name="4" type="Sprite" parent="."]
+region_enabled = true
+region_rect = Rect2( 0, 64, 32, 32 )
+region_filter_clip = true
+
+[node name="5" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 64, 32, 32 )
+region_filter_clip = true
+
+[node name="Body" type="StaticBody2D" parent="5"]
+
+[node name="Shape" type="CollisionShape2D" parent="5/Body"]
+shape = SubResource( 1 )
+
+[node name="6" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 96, 32, 32 )
+region_filter_clip = true
+
+[node name="Body" type="StaticBody2D" parent="6"]
+
+[node name="Shape" type="CollisionShape2D" parent="6/Body"]
+shape = SubResource( 1 )
+
+[node name="7" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 96, 32, 32 )
+region_filter_clip = true
+
+[node name="Body" type="StaticBody2D" parent="7"]
+
+[node name="Shape" type="CollisionShape2D" parent="7/Body"]
+shape = SubResource( 1 )
+
+[node name="8" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 128, 32, 32 )
+region_filter_clip = true
+
+[node name="Body" type="StaticBody2D" parent="8"]
+
+[node name="Shape" type="CollisionShape2D" parent="8/Body"]
+shape = SubResource( 1 )
+
+[node name="9" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 128, 32, 32 )
+region_filter_clip = true
+
+[node name="Body" type="StaticBody2D" parent="9"]
+
+[node name="Shape" type="CollisionShape2D" parent="9/Body"]
+shape = SubResource( 1 )
+
+[node name="10" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 160, 32, 32 )
+region_filter_clip = true
+
+[node name="Body" type="StaticBody2D" parent="10"]
+
+[node name="Shape" type="CollisionShape2D" parent="10/Body"]
+shape = SubResource( 1 )
+
+[node name="11" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 160, 32, 32 )
+region_filter_clip = true
+
+[node name="12" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 192, 32, 32 )
+region_filter_clip = true
+
+[node name="13" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 192, 32, 32 )
+region_filter_clip = true
+
+[node name="14" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
+region_filter_clip = true
+
+[node name="15" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 192, 32, 32 )
+region_filter_clip = true
+
+[node name="16" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 224, 32, 32 )
+region_filter_clip = true
+
+[node name="17" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 224, 32, 32 )
+region_filter_clip = true
+
+[node name="18" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 256, 32, 32 )
+region_filter_clip = true
