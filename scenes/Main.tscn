@@ -37,3 +37,20 @@ max_distance = 1e+12
 [node name="PlayerPos" type="Position2D" parent="."]
 visible = false
 position = Vector2( 430, 305 )
+
+[node name="FlyPos" type="Node2D" parent="."]
+
+[node name="FlyPos1" type="Position2D" parent="FlyPos" groups=[
+"FlyPos",
+]]
+position = Vector2( 1162, 384 )
+
+[node name="FlyPos2" type="Position2D" parent="FlyPos" groups=[
+"FlyPos",
+]]
+position = Vector2( 1162, 284 )
+
+[node name="FlyPos3" type="Position2D" parent="FlyPos" groups=[
+"FlyPos",
+]]
+position = Vector2( 1162, 184 )

@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://sprite/bat-pixelart.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Bat.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/BatFollow.gd" type="Script" id=3]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -33.6736, -93.7665, 0, 0, 0, 0, -31.4286, 89.756, 0, 0, 0, 0, -72.5721, 90.9067, 0, 0, 0, 0, -73.1308, -91.4801, 0, 0, 0, 0, -33.6736, -93.7665 )
+}
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 192, 192, 192 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 192, 192, 192, 192 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "flying",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 44.2533, 40.5199 )
+
+[node name="Bat" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="BatPath" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="BatFollow" type="PathFollow2D" parent="BatPath"]
+position = Vector2( -33.6736, -93.7665 )
+rotation = 1.55856
+rotate = false
+script = ExtResource( 3 )
+
+[node name="Body" type="KinematicBody2D" parent="BatPath/BatFollow" groups=[
+"enemy",
+]]
+position = Vector2( 94.1714, -32.524 )
+rotation = -1.55856
+
+[node name="Sprite" type="AnimatedSprite" parent="BatPath/BatFollow/Body"]
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 6 )
+animation = "flying"
+frame = 1
+playing = true
+
+[node name="Shape" type="CollisionShape2D" parent="BatPath/BatFollow/Body"]
+position = Vector2( -3.3371, -3.3371 )
+shape = SubResource( 7 )
+
+[node name="notifier" type="VisibilityNotifier2D" parent="."]
+[connection signal="screen_exited" from="notifier" to="." method="_on_notifier_screen_exited"]

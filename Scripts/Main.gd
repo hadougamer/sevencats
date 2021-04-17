@@ -24,6 +24,20 @@ func start_player():
 	Globals.player.position = $PlayerPos.position
 	add_child(Globals.player)
 
+func load_bat():
+	
+	var pre_bat = preload("res://scenes/Bat.tscn")
+	var bat = pre_bat.instance()
+	
+	# Random Bat Position
+	var rnd = randi()%3
+	var flyPos = $FlyPos.get_child(rnd)
+	
+	flyPos.position.x = (Globals.camera.position.x + 720)
+	bat.position = flyPos.position
+
+	add_child(bat)
+
 func _process(delta):
 	if Globals.player != null:
 		# Delete old levels
@@ -40,6 +54,10 @@ func _process(delta):
 		else:
 			Globals.points+=5
 			Globals.timer=0
+
+			# Randomize bat load
+			if randi()%100 > 75:
+				load_bat()
 
 		Globals.camera.position.x += 5
 		$Interface.position.x = (Globals.camera.position.x - 520)
