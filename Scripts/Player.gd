@@ -49,7 +49,10 @@ func check_collision():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		if collider and collider.is_in_group("enemy"):
-			collider.queue_free()
+			# Clean screen enemies
+			for enemy in get_tree().get_nodes_in_group("enemy"):
+				enemy.queue_free()
+			
 			is_dead = true
 
 func die():

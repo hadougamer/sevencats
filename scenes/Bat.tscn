@@ -10,22 +10,18 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 192, 192 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 192, 0, 192, 192 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 192, 192, 192 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 192, 192, 192, 192 )
 
@@ -62,7 +58,7 @@ rotation = -1.55856
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "flying"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Shape" type="CollisionShape2D" parent="BatPath/BatFollow/Body"]

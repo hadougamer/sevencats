@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprite/asset/MarioLevelStuffs.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.6764, 15.9658 )
+
+[node name="TileSet" type="Node2D"]
+
+[node name="0" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="Body" type="StaticBody2D" parent="0"]
+
+[node name="Collider" type="CollisionShape2D" parent="0/Body"]
+shape = SubResource( 1 )
+
+[node name="1" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+
+[node name="Body" type="StaticBody2D" parent="1"]
+
+[node name="Collider" type="CollisionShape2D" parent="1/Body"]
+shape = SubResource( 1 )
+
+[node name="2" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
+
+[node name="Body" type="StaticBody2D" parent="2"]
+
+[node name="Collider" type="CollisionShape2D" parent="2/Body"]
+shape = SubResource( 1 )
+
+[node name="3" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 32, 32 )
+
+[node name="Body" type="StaticBody2D" parent="3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="3/Body"]
+position = Vector2( 0.32545, 1.91068 )
+scale = Vector2( 1.5957, 1.4834 )
+polygon = PoolVector2Array( -10.097, 9.23269, 9.74682, -10.6111, 10.0618, 9.54767 )

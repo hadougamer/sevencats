@@ -1,7 +1,7 @@
 extends Node
 
 # Score
-var hiscore = 7000
+var hiscore = 0
 
 # Camera
 var camera = null
@@ -15,7 +15,8 @@ var lifes = 0
 
 var levels = [
 	preload("res://scenes/Level1-1.tscn"),
-	preload("res://scenes/Level1-2.tscn")
+	preload("res://scenes/Level1-2.tscn"),
+	preload("res://scenes/Level1-3.tscn")
 ]
 
 var lvl_control
