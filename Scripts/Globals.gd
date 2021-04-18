@@ -18,9 +18,11 @@ var default_lifes = 7
 var lifes = 0
 
 var levels = [
-	preload("res://scenes/Level1-1.tscn"),
-	preload("res://scenes/Level1-2.tscn"),
-	preload("res://scenes/Level1-3.tscn")
+	#preload("res://scenes/Level1-1.tscn"),
+	#preload("res://scenes/Level1-2.tscn"),
+	#preload("res://scenes/Level1-3.tscn"),
+	preload("res://scenes/Level2-1.tscn"),
+	preload("res://scenes/Level2-1.tscn")
 ]
 
 var lvl_control
