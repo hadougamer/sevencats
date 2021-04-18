@@ -59,7 +59,10 @@ func die():
 	self.queue_free()
 
 func _on_visible_screen_exited():
-	print('Player exited the screen')
+	# Kill when the player fall into a hole
+	if self.position.y >= Globals.win_height:
+		self.die()
+	
 	if self.position.x < Globals.camera.position.x: 
 		self.die()
 	else:

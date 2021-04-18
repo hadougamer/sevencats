@@ -6,6 +6,10 @@ var hiscore = 0
 # Camera
 var camera = null
 
+# Windows Size
+var win_width = 1024
+var win_height = 768
+
 # Player
 var player = null # Player Instante
 var pre_player = preload("res://scenes/Player.tscn")
