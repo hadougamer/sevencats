@@ -58,6 +58,7 @@ rotation = -1.55856
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 6 )
 animation = "flying"
+frame = 1
 playing = true
 
 [node name="Shape" type="CollisionShape2D" parent="BatPath/BatFollow/Body"]

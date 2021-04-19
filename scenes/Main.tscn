@@ -54,3 +54,11 @@ position = Vector2( 1162, 284 )
 "FlyPos",
 ]]
 position = Vector2( 1162, 184 )
+
+[node name="FallPos" type="Node2D" parent="."]
+
+[node name="FallPos01" type="Position2D" parent="FallPos"]
+position = Vector2( 765.635, -1.49831 )
+
+[node name="FallPos02" type="Position2D" parent="FallPos"]
+position = Vector2( 1122.73, -139.492 )

@@ -24,8 +24,7 @@ func start_player():
 	Globals.player.position = $PlayerPos.position
 	add_child(Globals.player)
 
-func load_bat():
-	
+func load_bat():	
 	var pre_bat = preload("res://scenes/Bat.tscn")
 	var bat = pre_bat.instance()
 	
@@ -37,6 +36,19 @@ func load_bat():
 	bat.position = flyPos.position
 
 	add_child(bat)
+
+func load_pumpkin():	
+	var pre_pumpkin = preload("res://scenes/Pumpkin.tscn")
+	var pumpkin = pre_pumpkin.instance()
+	
+	# Random Bat Position
+	var rnd = randi()%2
+	var fallPos = $FallPos.get_child(rnd)
+	
+	fallPos.position.x = (Globals.camera.position.x + 100)
+	pumpkin.position = fallPos.position
+
+	add_child(pumpkin)
 
 func _process(delta):
 	if Globals.player != null:
@@ -58,6 +70,10 @@ func _process(delta):
 			# Randomize bat load
 			if randi()%100 > 75:
 				load_bat()
+
+			# Randomize pumpkin load
+			if randi()%100 > 50 and Globals.points > 150:
+				load_pumpkin()
 
 		Globals.camera.position.x += 5
 		
