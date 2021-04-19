@@ -60,6 +60,7 @@ func _process(delta):
 				load_bat()
 
 		Globals.camera.position.x += 5
+		
 		$Interface.position.x = (Globals.camera.position.x - 520)
 		$PlayerPos.position.x = (Globals.camera.position.x - 100)
 		$Interface.setPoints( Globals.points )
