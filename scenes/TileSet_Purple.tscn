@@ -239,3 +239,31 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="s/StaticBody2D"]
 scale = Vector2( 0.8, 0.8 )
 shape = SubResource( 1 )
+
+[node name="jl" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 48, 16, 16 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="jl"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jl/StaticBody2D"]
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 1 )
+
+[node name="jr" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 64, 16, 16 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="jr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jr/StaticBody2D"]
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 1 )

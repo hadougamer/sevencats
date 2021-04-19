@@ -1,5 +1,5 @@
 extends Node2D
-var lnum = 0
+var lnum = 1
 
 func _on_lpos_notifier_screen_exited():
 	print("Load level " + str(lnum))
