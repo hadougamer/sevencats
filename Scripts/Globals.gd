@@ -8,7 +8,7 @@ var camera = null
 
 # Windows Size
 var win_width = 1024
-var win_height = 768
+var win_height = 1024
 
 # Player
 var player = null # Player Instante
@@ -18,9 +18,7 @@ var default_lifes = 7
 var lifes = 0
 
 var levels = [
-	preload("res://scenes/Level1-1.tscn"),
-	preload("res://scenes/Level1-2.tscn"),
-	preload("res://scenes/Level1-3.tscn")
+	preload("res://scenes/Level1-1.tscn")
 ]
 
 var lvl_control
